@@ -13,9 +13,9 @@
         <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,150,0,0" TextWrapping="Wrap" Text="Username: " VerticalAlignment="Top"/>
         <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,203,0,0" TextWrapping="Wrap" Text="Level: " VerticalAlignment="Top"/>
         <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,258,0,0" TextWrapping="Wrap" Text="Score: " VerticalAlignment="Top"/>
-        <TextBox Height="37" Width="176" TextChanged="Username_TextChanged" Margin="430,150,187.6,232" Name="usernameT"></TextBox>
-        <TextBox Height="37" Width="176" TextChanged="Level_TextChanged" Margin="430,203,187.6,180" Name="levelT"></TextBox>
-        <TextBox Height="37" Width="176" TextChanged="Score_TextChanged" Margin="430,258,187.6,125" x:Name="scoreT"/>
+        <TextBox FontSize="24" Height="37" Width="176" TextChanged="Username_TextChanged" Margin="430,150,187.6,232" Name="usernameT"></TextBox>
+        <TextBox FontSize="24" Height="37" Width="176" TextChanged="Level_TextChanged" Margin="430,203,187.6,180" Name="levelT"></TextBox>
+        <TextBox FontSize="24" Height="37" Width="176" TextChanged="Score_TextChanged" Margin="430,258,187.6,125" x:Name="scoreT"/>
         <Button FontSize="20" Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="430,328,0,0" Click="Minus_Click"/>
         <Button FontSize="20" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="531,328,0,0" Click="Plus_Click"/>
         

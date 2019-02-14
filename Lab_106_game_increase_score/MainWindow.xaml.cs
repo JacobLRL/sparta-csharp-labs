@@ -29,7 +29,6 @@ namespace Lab_106_game_increase_score
 
         private void Username_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //string text = new TextRange((sender as RichTextBox).Document.ContentStart, (sender as RichTextBox).Document.ContentEnd).Text;
             string text = (sender as TextBox).Text;
             if (!text.Equals(""))
             {
@@ -85,7 +84,6 @@ namespace Lab_106_game_increase_score
             }
             catch (Exception){ }
         }
-
 
 
         // create a gaming homepage
