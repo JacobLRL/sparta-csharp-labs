@@ -26,12 +26,30 @@ namespace Lab_105_game_name_and_score
             InitializeComponent();
         }
 
-        private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Username_TextChanged(object sender, TextChangedEventArgs e)
         {
-            File.WriteAllText("username.txt", new TextRange((sender as RichTextBox).Document.ContentStart, (sender as RichTextBox).Document.ContentEnd).Text);
-
-            //new TextRange((sender as RichTextBox).Document.ContentStart, (sender as RichTextBox).Document.ContentEnd).Text;
+            string text = new TextRange((sender as RichTextBox).Document.ContentStart, (sender as RichTextBox).Document.ContentEnd).Text;
+            if (!text.Equals("")) {
+                File.WriteAllText("username.txt", text);
+            } 
         }
+        private void Level_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string text = new TextRange((sender as RichTextBox).Document.ContentStart, (sender as RichTextBox).Document.ContentEnd).Text;
+            if (!text.Equals("")) {
+                File.WriteAllText("level.txt", text);
+            } 
+        }
+        private void Score_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string text = new TextRange((sender as RichTextBox).Document.ContentStart, (sender as RichTextBox).Document.ContentEnd).Text;
+            if (!text.Equals("")) {
+                File.WriteAllText("score.txt", text);
+            } 
+        }
+        
+
+
         // create a gaming homepage
         // name of the gamer saved to text file
         // level reached

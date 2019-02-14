@@ -13,26 +13,27 @@
         <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,150,0,0" TextWrapping="Wrap" Text="Username: " VerticalAlignment="Top"/>
         <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,203,0,0" TextWrapping="Wrap" Text="Level: " VerticalAlignment="Top"/>
         <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,258,0,0" TextWrapping="Wrap" Text="Score: " VerticalAlignment="Top"/>
-        <RichTextBox FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,150,0,0" VerticalAlignment="Top" Width="176" TextChanged="RichTextBox_TextChanged">
+        <RichTextBox AcceptsReturn="False"  FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,150,0,0" VerticalAlignment="Top" Width="176" TextChanged="Username_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Batman"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,205,0,0" VerticalAlignment="Top" Width="176">
+        <RichTextBox AcceptsReturn="False" FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,205,0,0" VerticalAlignment="Top" Width="176" TextChanged="Level_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="0"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <RichTextBox FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,259,0,0" VerticalAlignment="Top" Width="176">
+        <RichTextBox AcceptsReturn="False" FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,259,0,0" VerticalAlignment="Top" Width="176" TextChanged="Score_TextChanged">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="0"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
+        
     </Grid>
 </Window>
