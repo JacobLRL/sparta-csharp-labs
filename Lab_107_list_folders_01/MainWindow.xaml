@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Folders" VerticalAlignment="Top" Width="100" Margin="350,124,0,0" />
+        <ListBox HorizontalAlignment="Left" Height="184" VerticalAlignment="Top" Width="100" Margin="350,170,0,0" Name="ListOfFolders"/>
         
     </Grid>
 </Window>

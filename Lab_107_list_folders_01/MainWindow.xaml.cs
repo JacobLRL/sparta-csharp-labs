@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,21 @@ namespace Lab_107_list_folders_01
         public MainWindow()
         {
             InitializeComponent();
+            ListFolders();
         }
+
+
+        public void ListFolders() {
+            string[] allfiles = Directory.GetFiles("C:\\Labs", "*.*", SearchOption.AllDirectories);
+            foreach (var item in allfiles)
+            {
+                ListBoxItem itm = new ListBoxItem();
+                itm.Content = item;
+                ListOfFolders.Items.Add(itm);
+            }
+        }
+
     }
+
+    
 }
