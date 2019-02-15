@@ -8,7 +8,6 @@ namespace SpeedTyping
 {
     class Program
     {
-
         private static int time = 0;
         public static string alphabet = "abcdefghijklmnopqrstuvwxyz";
         static void Main(string[] args)
@@ -24,21 +23,27 @@ namespace SpeedTyping
             DateTime now = DateTime.Now;
             DateTime finish = now.AddSeconds(sec);
             string answer = "";
+            string ans = "";
             if (mode == "alphabetical")
             {
-                Alpha(answer, finish);
+                ans = Alpha(answer, finish);
             }
             else
             {
-                Rand(answer, finish);
+                ans = Rand(answer, finish);
             }
+            Console.WriteLine("");
+            Console.WriteLine("Times up");
+            Console.WriteLine(ans);
+            Console.WriteLine(ans.Length);
+            Console.Read();
         }
 
         public static void SetTime(int seconds) {
             time = seconds;
         }
 
-        public static void Alpha(string answer, DateTime finish) {
+        public static string Alpha(string answer, DateTime finish) {
             while (true)
             {
                 foreach (var elem in alphabet)
@@ -57,24 +62,16 @@ namespace SpeedTyping
                 }
                 if (DateTime.Compare(DateTime.Now, finish) >= 0) break;
             }
-            Console.WriteLine("");
-            Console.WriteLine("Times up");
-            Console.WriteLine(answer);
-            Console.WriteLine(answer.Length);
-            Console.Read();
+            return answer;
         }
 
-        public static void Rand(string answer, DateTime finish) {
+        public static string Rand(string answer, DateTime finish) {
             while (true)
             {
                 answer += Console.ReadKey().KeyChar;
                 if (DateTime.Compare(DateTime.Now, finish) >= 0) break;
             }
-            Console.WriteLine("");
-            Console.WriteLine("Times up");
-            Console.WriteLine(answer);
-            Console.WriteLine(answer.Length);
-            Console.Read();
+            return answer;
         } 
     }
 
