@@ -8,20 +8,19 @@ namespace SpeedTyping
 {
     class Program
     {
-        private static int time = 0;
+        public static int time = 0;
         public static string alphabet = "abcdefghijklmnopqrstuvwxyz";
         static void Main(string[] args)
         {
             Console.WriteLine("How long would you like to enter characters?");
-            int sec = int.Parse(Console.ReadLine());
-            SetTime(sec);
+            time = int.Parse(Console.ReadLine());
             Console.WriteLine("You have selected " + time + " seconds");
             Console.WriteLine("What mode would you like, alphabetical or random");
             string mode = Console.ReadLine();
             Console.WriteLine("press enter key to begin!");
             Console.ReadLine();
             DateTime now = DateTime.Now;
-            DateTime finish = now.AddSeconds(sec);
+            DateTime finish = now.AddSeconds(time);
             string answer = "";
             string ans = "";
             if (mode == "alphabetical")
@@ -32,15 +31,10 @@ namespace SpeedTyping
             {
                 ans = Rand(answer, finish);
             }
-            Console.WriteLine("");
-            Console.WriteLine("Times up");
-            Console.WriteLine(ans);
-            Console.WriteLine(ans.Length);
+            Console.WriteLine("\nTimes up");
+            Console.WriteLine($"What you typed: {ans}");
+            Console.WriteLine($"Score: {ans.Length}");
             Console.Read();
-        }
-
-        public static void SetTime(int seconds) {
-            time = seconds;
         }
 
         public static string Alpha(string answer, DateTime finish) {
@@ -55,6 +49,9 @@ namespace SpeedTyping
                         {
                             answer += elem;
                             gate = false;
+                        }
+                        else {
+                            Console.WriteLine("\nWrong!");
                         }
                         if (DateTime.Compare(DateTime.Now, finish) >= 0) break;
                     }
@@ -74,5 +71,4 @@ namespace SpeedTyping
             return answer;
         } 
     }
-
 }
