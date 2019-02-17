@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_104_Random_Person", "La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_101_Speed_Typing", "Lab_101_speed_typing\ConsoleApp4\Lab_101_Speed_Typing.csproj", "{FAEDB8FB-79F7-44C0-B6BA-AABEDA7E6D69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_110_exception", "Lab_110_exception\Lab_110_exception.csproj", "{ECDE5B5D-A401-40AD-B553-5FA68DF31E21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{FAEDB8FB-79F7-44C0-B6BA-AABEDA7E6D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAEDB8FB-79F7-44C0-B6BA-AABEDA7E6D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAEDB8FB-79F7-44C0-B6BA-AABEDA7E6D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECDE5B5D-A401-40AD-B553-5FA68DF31E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECDE5B5D-A401-40AD-B553-5FA68DF31E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECDE5B5D-A401-40AD-B553-5FA68DF31E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECDE5B5D-A401-40AD-B553-5FA68DF31E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
