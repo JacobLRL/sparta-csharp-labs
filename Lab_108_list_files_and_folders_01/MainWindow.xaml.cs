@@ -28,7 +28,6 @@ namespace Lab_108_list_files_and_folders_01
             ListFolders();
         }
 
-
         public void ListFolders()
         {
             string[] allfiles = Directory.GetDirectories("/Labs", "*.*", SearchOption.TopDirectoryOnly);

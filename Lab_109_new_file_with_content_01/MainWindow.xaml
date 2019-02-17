@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:Lab_109_new_file_with_content_01"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Pink">
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Folders" VerticalAlignment="Top" Width="163" Margin="151,28,0,0" />
+        <Button Content="Open for Files" HorizontalAlignment="Left" Margin="367,134,0,0" VerticalAlignment="Top" Width="100" Click="Open_Click" RenderTransformOrigin="0.472,-2.844"/>
+        <ListBox HorizontalAlignment="Left" Height="184" VerticalAlignment="Top" Width="163" Margin="151,75,0,0" Name="ListOfFolders"/>
+        <ListBox HorizontalAlignment="Left" Height="184" VerticalAlignment="Top" Width="163" Margin="518,75,0,0" Name="ListOfFiles"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Files" VerticalAlignment="Top" Width="163" Margin="518,28,0,0" />
+        <TextBox Name="Contents" HorizontalAlignment="Left" Height="79" Margin="151,314,0,0" TextWrapping="Wrap" Text="Content" VerticalAlignment="Top" Width="530"/>
+        <TextBox Name="Filename" HorizontalAlignment="Left" Height="23" Margin="151,286,0,0" TextWrapping="Wrap" Text="Filename" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Create File" HorizontalAlignment="Left" Margin="381,286,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="Create_Click"/>
+        <Button Content="Open for Folders" HorizontalAlignment="Left" Margin="367,171,0,0" VerticalAlignment="Top" Width="100" Click="Open_Folders_Click" RenderTransformOrigin="0.472,-2.844"/>
+
     </Grid>
 </Window>

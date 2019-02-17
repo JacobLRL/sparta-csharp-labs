@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Lab_109_new_file_with_content_01
 {
@@ -23,6 +24,55 @@ namespace Lab_109_new_file_with_content_01
         public MainWindow()
         {
             InitializeComponent();
+            ListFolders();
+        }
+
+        public void ListFolders()
+        {
+            string[] allfiles = Directory.GetDirectories("/Labs", "*.*", SearchOption.TopDirectoryOnly);
+            foreach (var item in allfiles)
+            {
+                ListBoxItem itm = new ListBoxItem();
+                itm.Content = item;
+                ListOfFolders.Items.Add(itm);
+            }
+        }
+
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem item = (ListOfFolders.SelectedItem as ListBoxItem);
+            string folder = (item.Content as string).Replace("\\", "/");
+            string[] allFiles = Directory.GetFiles(folder, "*.*", SearchOption.TopDirectoryOnly);
+            ListOfFiles.Items.Clear();
+            foreach (var items in allFiles)
+            {
+                ListBoxItem itm = new ListBoxItem();
+                itm.Content = items;
+                ListOfFiles.Items.Add(itm);
+            }
+        }
+
+        private void Open_Folders_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem item = (ListOfFolders.SelectedItem as ListBoxItem);
+            string folder = (item.Content as string).Replace("\\", "/");
+            string[] allFiles = Directory.GetDirectories(folder, "*.*", SearchOption.TopDirectoryOnly);
+            ListOfFiles.Items.Clear();
+            foreach (var items in allFiles)
+            {
+                ListBoxItem itm = new ListBoxItem();
+                itm.Content = items;
+                ListOfFiles.Items.Add(itm);
+            }
+        }
+
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            string content = Contents.Text;
+            string filename = Filename.Text;
+            ListBoxItem item = (ListOfFolders.SelectedItem as ListBoxItem);
+            string folder = (item.Content as string).Replace("\\", "/");
+            File.WriteAllText($"{folder}/{filename}.txt", content);
         }
     }
 }
