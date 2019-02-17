@@ -29,7 +29,7 @@ namespace Lab_107_list_folders_01
 
 
         public void ListFolders() {
-            string[] allfiles = Directory.GetFiles("C:\\Labs", "*.*", SearchOption.AllDirectories);
+            string[] allfiles = Directory.GetDirectories("/Labs", "*.*", SearchOption.TopDirectoryOnly);
             foreach (var item in allfiles)
             {
                 ListBoxItem itm = new ListBoxItem();
