@@ -1,0 +1,18 @@
+﻿<Window x:Class="Lab_108_list_files_and_folders_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_108_list_files_and_folders_01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Folders" VerticalAlignment="Top" Width="163" Margin="151,77,0,0" />
+        <Button Content="Open Folder" HorizontalAlignment="Left" Margin="380,198,0,0" VerticalAlignment="Top" Width="75" Click="Open_Click"/>
+        <ListBox HorizontalAlignment="Left" Height="184" VerticalAlignment="Top" Width="163" Margin="151,124,0,0" Name="ListOfFolders"/>
+        <ListBox HorizontalAlignment="Left" Height="184" VerticalAlignment="Top" Width="163" Margin="518,124,0,0" Name="ListOfFiles"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Files" VerticalAlignment="Top" Width="163" Margin="518,77,0,0" />
+        
+
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Lab_105_game_name_and_score.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_105_game_name_and_score"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/208650/5ce1a9311f68175164835cf0e43cec420a56e7a0.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,150,0,0" TextWrapping="Wrap" Text="Username: " VerticalAlignment="Top"/>
+        <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,203,0,0" TextWrapping="Wrap" Text="Level: " VerticalAlignment="Top"/>
+        <TextBlock FontSize="25" Foreground="White" HorizontalAlignment="Left" Margin="264,258,0,0" TextWrapping="Wrap" Text="Score: " VerticalAlignment="Top"/>
+        <RichTextBox AcceptsReturn="False"  FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,150,0,0" VerticalAlignment="Top" Width="176" TextChanged="Username_TextChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Batman"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox AcceptsReturn="False" FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,205,0,0" VerticalAlignment="Top" Width="176" TextChanged="Level_TextChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="0"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox AcceptsReturn="False" FontSize="25" HorizontalAlignment="Left" Height="37" Margin="430,259,0,0" VerticalAlignment="Top" Width="176" TextChanged="Score_TextChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="0"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        
+    </Grid>
+</Window>
