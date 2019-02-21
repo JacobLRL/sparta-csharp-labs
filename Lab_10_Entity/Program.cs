@@ -44,7 +44,7 @@ namespace Lab_10_Entity
             // SELECT one customer with lambda function
             using (var db = new NorthwindEntities())
             {
-                //linq query : Mocrosoft : Language independent query
+                //linq query : Microsoft : Language independent query
                 Customer customerToUpdate =
                     db.Customers.Where(c => c.CustomerID == "ALFKI").FirstOrDefault();
                 Console.WriteLine("\n\nFinding one customer with lambda function\n");
