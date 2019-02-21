@@ -2,8 +2,6 @@
  
 01 Hello World
  
-    Done
- 
 02 OOP
 
 03 OOP Parent Child
@@ -27,6 +25,8 @@
     Done
 
 102 Speedtype GUI
+ 
+    Done
 
 103 Production Line 100 Items
  
@@ -61,5 +61,17 @@
     Done
 
 111 New Folder with Exception Handling
+ 
+    Done
+
+112 Collections
+ 
+    Done
+
+113 ArrayLists
+ 
+    Done
+
+114 Entity GUI updating database
  
     Done

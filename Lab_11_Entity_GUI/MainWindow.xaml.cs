@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//using System.Windows.Data.MultiBinding;
 
 namespace Lab_11_Entity_GUI
 {
@@ -22,20 +23,43 @@ namespace Lab_11_Entity_GUI
     {
         private static List<string> customerList = new List<string>();
         private static List<Customer> customers = new List<Customer>();
+        private static Customer customer;
         public MainWindow()
         {
             InitializeComponent();
             Initialize();
         }
 
-        void Initialize() {
-            using (var db = new NorthwindEntities()) {
+        void Initialize()
+        {
+            using (var db = new NorthwindEntities())
+            {
                 customers = db.Customers.ToList();
-                foreach (var elem in customers) {
+                foreach (var elem in customers)
+                {
                     customerList.Add($"Contactname: {elem.ContactName} has ID {elem.CustomerID}");
                 }
                 ListBox01.ItemsSource = customerList;
             }
+
+            using (var db = new NorthwindEntities())
+            {
+                customers = db.Customers.ToList();
+                ListBox02.ItemsSource = customers;
+            }
+
+            using (var db = new NorthwindEntities())
+            {
+                customers = db.Customers.ToList();
+                ListBox03.ItemsSource = customers;
+                ListBox03.DisplayMemberPath = "ContactName";
+            }
+        }
+
+        private void ListBox03_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            customer = ListBox03.SelectedItem as Customer;
+            ContactName.Text = customer.ContactName;
         }
     }
 }

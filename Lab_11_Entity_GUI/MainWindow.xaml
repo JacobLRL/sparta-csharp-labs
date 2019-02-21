@@ -11,8 +11,6 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -21,8 +19,24 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <TextBox Name="ContactName" Grid.Row="1" Grid.Column="2" Background="Azure"/>
+
         <ListBox Name="ListBox01" Grid.Column="0" Grid.Row="3" Background="Aqua"/>
-        <ListBox Name="ListBox02" Grid.Column="1" Grid.Row="3" Background="Aqua"/>
-        <ListBox Name="ListBox03" Grid.Column="2" Grid.Row="3" Background="Aqua"/>
+        <ListBox Name="ListBox02" Grid.Column="1" Grid.Row="3" Background="Aqua">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="ID - {0} - Name - {1}">
+                                <Binding Path="CustomerID"/>
+                                <Binding Path="ContactName"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Name="ListBox03" Grid.Column="2" Grid.Row="3" Background="Aqua" SelectionChanged="ListBox03_SelectionChanged"/>
     </Grid>
 </Window>
