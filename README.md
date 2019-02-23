@@ -75,3 +75,7 @@
 114 Entity GUI updating database
  
     Done
+
+115 Entity with OOP
+ 
+    Done
