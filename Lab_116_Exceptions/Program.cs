@@ -10,17 +10,25 @@ namespace Lab_116_Exceptions
     {
         static void Main(string[] args)
         {
+            int x = 10;
+            int y = 0;
             try
             {
                 try
                 {
+                    int z = x / y;
                     throw new Exception("Phils exception");
                 }
-                catch (Exception)
+                catch (DivideByZeroException d) {
+                    Console.WriteLine(d.Message);
+                }
+                catch (Exception e)
                 {
+                    Console.WriteLine(e.Message);
                     Console.WriteLine("something");
                     throw;
                 }
+
             }
             catch (Exception e)
             {
