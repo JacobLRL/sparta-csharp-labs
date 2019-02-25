@@ -21,6 +21,7 @@ namespace Lab_116_Exceptions
                 }
                 catch (DivideByZeroException d) {
                     Console.WriteLine(d.Message);
+                    
                 }
                 catch (Exception e)
                 {
