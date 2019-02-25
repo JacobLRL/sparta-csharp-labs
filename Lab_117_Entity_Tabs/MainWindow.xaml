@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab_117_Entity_Tabs"
         mc:Ignorable="d"
-        Title="MainWindow" Height="Auto" Width="Auto">
+        Title="MainWindow" Height="Auto" Width="Auto" Background="Gray">
     <Grid>
         <TabControl Name="TabController" HorizontalAlignment="Left" Height="225" Margin="173,97,0,0" VerticalAlignment="Top" Width="455" SelectionChanged="TabControl_SelectionChanged">
-            
+
         </TabControl>
+        <Button Name="NewUser" Content="Add New User" HorizontalAlignment="Left" Margin="511,364,0,0" VerticalAlignment="Top" Width="117" Click="NewUser_Click"/>
 
     </Grid>
 </Window>

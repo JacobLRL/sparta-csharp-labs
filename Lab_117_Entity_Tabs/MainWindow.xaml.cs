@@ -127,5 +127,26 @@ namespace Lab_117_Entity_Tabs
             }
         }
 
+        private void NewUser_Click(object sender, RoutedEventArgs e)
+        {
+            Window window = new NewUserWindow();
+            
+            window.Show();
+        }
+
+        /*
+         *      Address = c.Address;
+                City= c.City;
+                ContactName = c.ContactName;
+                CompanyName = c.CompanyName;
+                ContactTitle = c.ContactTitle;
+                Country = c.Country;
+                CustomerID = c.CustomerID;
+                Fax = c.Fax;
+                Phone = c.Phone;
+                PostalCode = c.PostalCode;
+                Region = c.Region;
+         * 
+         */
     }
 }
