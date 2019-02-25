@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_114_Entity_GUI", "Lab_1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_115_Northwind_Entity_With_OOP", "Lab_115_Northwind_Entity_With_OOP\Lab_115_Northwind_Entity_With_OOP.csproj", "{0E7F16B0-DED1-4E32-BFB4-8D15732D1329}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_116_Exceptions", "Lab_116_Exceptions\Lab_116_Exceptions.csproj", "{92797D71-F500-4AD9-A5A8-FB262F66A5CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{0E7F16B0-DED1-4E32-BFB4-8D15732D1329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7F16B0-DED1-4E32-BFB4-8D15732D1329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7F16B0-DED1-4E32-BFB4-8D15732D1329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92797D71-F500-4AD9-A5A8-FB262F66A5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92797D71-F500-4AD9-A5A8-FB262F66A5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92797D71-F500-4AD9-A5A8-FB262F66A5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92797D71-F500-4AD9-A5A8-FB262F66A5CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
