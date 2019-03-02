@@ -93,11 +93,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_25_Checked_Unchecked", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_118_Array_of_Tests", "Lab_118_Array_of_Tests\Lab_118_Array_of_Tests.csproj", "{9D0CA606-9316-4762-A882-6E444B759EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_118_task_array_test", "Lab_118_task_array_test\Lab_118_task_array_test.csproj", "{33D3BF4F-1169-45DA-8231-98FC738E6A33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_118_task_array_test", "Lab_118_task_array_test\Lab_118_task_array_test.csproj", "{33D3BF4F-1169-45DA-8231-98FC738E6A33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_26_DotNetCore_Northwind", "Lab_26_DotNetCore_Northwind\Lab_26_DotNetCore_Northwind.csproj", "{2893C676-25DF-415B-BC27-EBDC9A19836C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_26_DotNetCore_Northwind", "Lab_26_DotNetCore_Northwind\Lab_26_DotNetCore_Northwind.csproj", "{2893C676-25DF-415B-BC27-EBDC9A19836C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_27_Hello_World_Web", "Lab_27_Hello_World_Web\Lab_27_Hello_World_Web.csproj", "{08417164-0EA0-4174-8F8B-72EACC3D0213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_119_Write_To_DB_Async", "Lab_119_Write_To_DB_Async\Lab_119_Write_To_DB_Async.csproj", "{EE185E29-763B-4F0E-8760-9749BDA2745D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -297,6 +299,10 @@ Global
 		{08417164-0EA0-4174-8F8B-72EACC3D0213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08417164-0EA0-4174-8F8B-72EACC3D0213}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08417164-0EA0-4174-8F8B-72EACC3D0213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE185E29-763B-4F0E-8760-9749BDA2745D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE185E29-763B-4F0E-8760-9749BDA2745D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE185E29-763B-4F0E-8760-9749BDA2745D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE185E29-763B-4F0E-8760-9749BDA2745D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
