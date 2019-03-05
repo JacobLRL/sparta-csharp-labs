@@ -1,24 +1,4 @@
 ## List Of Labs And Their Status
- 
-01 Hello World
- 
-02 OOP
-
-03 OOP Parent Child
-
-04 Array with Test
-
-06 WPF Basic Screen
-
-07 Console List Files Folders with Exception
-
-08 Files Folders Read Write Create
-
-09 Create XML file
-
-10 Entity CRUD Console app using Northwind DB
-
-11 Entity reading Northwind to GUI
 
 101 Speedtype
  
@@ -75,3 +55,32 @@
 114 Entity GUI updating database
  
     Done
+
+115 Entity with OOP
+ 
+    Done
+
+116 Exceptions
+ 
+    Done
+
+117 Entity with tabs
+ 
+    Done
+
+118 Task arrays
+ 
+    Done
+
+119 Write to DB Async
+ 
+    Done
+
+120 Hash set to .csv
+ 
+    Done
+
+121 Code First DB with GUI
+ 
+    Done
+
