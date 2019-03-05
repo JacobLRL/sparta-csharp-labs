@@ -1,33 +1,47 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+using System.IO;
 
-namespace Lab_26_DotNetCore_Northwind
+namespace Lab_30_Northwind_To_XML
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            //.NET core is lightweight and portable
-            /* 
-             have to add libraries manually
-             Entity framework core
-             Entity framework core framework
-             COre : can no longer add Ado entity model to bring in northwind
-             have to manually code it
-             */
             List<Product> products = new List<Product>();
-            using (var db = new Northwind()) {
-                products = db.Products.ToList();
-                foreach (var elem in products) {
-                    Console.WriteLine(elem.ProductName);
-                }
+            using (var db = new Northwind())
+            {
+                products = db.Products.Take(3).ToList();
             }
+            //products.ForEach(elem => Console.WriteLine(elem.ProductName));
+            var xml = new XElement("Products",
+                from p in products
+                select new XElement("Product",
+                new XAttribute("ProductID", p.ProductID),
+                new XAttribute("Cost", p.Cost),
+                new XAttribute("ProductName", p.ProductName)
+                ));
+            Console.WriteLine(xml.ToString());
+            var doc = new XDocument(xml);
+            doc.Save("Products.xml");
+            //read data
+            Console.WriteLine(Environment.NewLine + "now to read data" + Environment.NewLine);
+            Console.WriteLine(File.ReadAllText("Products.xml"));
+            var serializer = new XmlSerializer(typeof(Products));
+            
         }
+    }
+
+    [XmlRoot("Products")]
+    public class Products {
+        [XmlElement("Product")]
+        public List<Product> ProductList { get; set; }
     }
 
     public class Category

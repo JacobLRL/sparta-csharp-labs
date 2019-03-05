@@ -17,14 +17,14 @@ namespace Lab_118_Array_of_Tests
             s.Start();
             files.FileWrite(1000);
             s.Stop();
-            Console.WriteLine(s.ElapsedMilliseconds);
+            Console.WriteLine($"Time taken (ms): {s.ElapsedMilliseconds}");
         }
     }
 
     public class FileOperationSyncronous
     {
 
-        public string FileReadWrite(int numFiles) {
+        public string FileReadWrite(int numFiles) { 
             string data = "Saving some data - ";
             // create stopwatch
             var s = new Stopwatch();

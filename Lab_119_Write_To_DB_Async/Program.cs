@@ -16,7 +16,7 @@ namespace Lab_119_Write_To_DB_Async
             s.Start();
             something.ChangeName(1000);
             s.Stop();
-            Console.WriteLine(s.ElapsedMilliseconds);
+            Console.WriteLine($"Time taken (ms): {s.ElapsedMilliseconds}");
         }
     }
 
@@ -35,7 +35,6 @@ namespace Lab_119_Write_To_DB_Async
             using (var db = new NorthwindEntities()) {
                 Customer customer = new Customer();
                 customer = db.Customers.Where(c => c.CustomerID == "ALFKI").FirstOrDefault();
-                //Console.WriteLine(customer.ContactName + $" {number}");
                 customer.ContactName = $"Person {number}";
                 Console.WriteLine(customer.ContactName);
                 db.SaveChanges();
